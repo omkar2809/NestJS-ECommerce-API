@@ -3,7 +3,7 @@ import * as mongoose from 'mongoose';
 export const ProductSchema = new mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'USer'
+        ref: 'User'
     },
     title : String,
     description: String,
