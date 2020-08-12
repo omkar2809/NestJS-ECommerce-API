@@ -2,14 +2,14 @@ import { Document } from 'mongoose'
 import { User } from './user';
 import { Product } from './product';
 
-interface ProductOrder {
+export interface ProductOrder {
     product: Product;
     quantity: number;
 }
 
 export interface Order extends Document {
     owner: User;
-    totalPrice: number;
+    // totalPrice: number;
     products: ProductOrder[];
-    created: Date
+    //created: Date
 }

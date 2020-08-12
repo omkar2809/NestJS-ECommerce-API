@@ -25,7 +25,7 @@ export class ProductService {
         return await this.productModel.find({owner: Object(userId)}).populate('owner');
     }
 
-    async create(productDTO: any, user: User): Promise<Product> {
+    async create(productDTO: CreateProductDTO, user: User): Promise<Product> {
         const product = await this.productModel.create({
             ...productDTO,
             owner: user
